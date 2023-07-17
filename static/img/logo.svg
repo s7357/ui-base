@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 511.99201 511.99959"
+   version="1.1"
+   id="svg4230"
+   width="511.992"
+   height="511.9996"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+  <defs
+     id="defs4224">
+    <style
+       id="style4222">.fa-secondary{opacity:.4}</style>
+  </defs>
+  <g
+     id="g4316"
+     transform="scale(0.99998437)"
+     style="fill:#e7672e;fill-opacity:1">
+    <path
+       d="m 256,192 a 96,96 0 1 1 96,-96 96,96 0 0 1 -96,96 z"
+       class="fa-secondary"
+       id="path4226"
+       style="opacity:1;fill:#e7672e;fill-opacity:1" />
+    <path
+       d="M 233.59,241.1 C 174.26,204.78 78.16,194.8 29.8,192.1 13.55,191.13 0,203.51 0,219.14 v 222.8 c 0,14.33 11.59,26.28 26.49,27.06 43.66,2.29 132,10.68 193,41.43 9.37,4.72 20.48,-1.71 20.48,-11.87 v -246 a 13.31,13.31 0 0 0 -6.38,-11.46 z m 248.61,-49 c -48.35,2.74 -144.46,12.73 -203.78,49 A 13.56,13.56 0 0 0 272,252.73 v 245.79 c 0,10.19 11.14,16.63 20.54,11.9 61,-30.72 149.32,-39.11 193,-41.4 C 500.42,468.24 512,456.29 512,442 V 219.14 c 0,-15.63 -13.55,-28.01 -29.8,-27.09 z"
+       class="fa-primary"
+       id="path4228"
+       style="fill:#e7672e;fill-opacity:1" />
+  </g>
+</svg>

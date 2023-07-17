@@ -1,0 +1,44 @@
+:root {
+  --fr-color-primary: 231, 103, 46;
+  --fr-color-secondary: 60, 86, 117;
+}
+
+body {
+  background: rgb(241, 245, 249);
+}
+
+#features {
+  .icon {
+    color: rgba(var(--fr-color-primary), 1);
+  }
+}
+
+.btn {
+  &-flarus {
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+
+    &-primary {
+      --bg: var(--fr-color-primary);
+      --bs-btn-bg: rgba(var(--bg), 1);
+      --bs-btn-border-color: rgba(var(--bg), 1);
+      --bs-btn-hover-bg: rgba(var(--bg), .9);
+      --bs-btn-hover-border-color: rgba(var(--bg), .9);
+      --bs-btn-focus-shadow-rgb: rgba(var(--bg), 1);
+      --bs-btn-active-bg: rgba(var(--bg), .8);
+      --bs-btn-active-border-color: rgba(var(--bg), .8);
+    }
+
+    &-secondary {
+      --bg: var(--fr-color-secondary);
+      --bs-btn-bg: rgba(var(--bg), 1);
+      --bs-btn-border-color: rgba(var(--bg), 1);
+      --bs-btn-hover-bg: rgba(var(--bg), .9);
+      --bs-btn-hover-border-color: rgba(var(--bg), .9);
+      --bs-btn-focus-shadow-rgb: rgba(var(--bg), 1);
+      --bs-btn-active-bg: rgba(var(--bg), .8);
+      --bs-btn-active-border-color: rgba(var(--bg), .8);
+    }
+  }
+}

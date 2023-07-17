@@ -1,0 +1,47 @@
+# -------------------------------------------------------------------------------------------------------------------- #
+# General.
+# -------------------------------------------------------------------------------------------------------------------- #
+
+close: { other: "Close" }
+contacts: { other: "Contacts" }
+developers: { other: "Developers" }
+egg: { other: "Oops!" }
+languages: { other: "Languages" }
+social_networks: { other: "Social networks" }
+
+# -------------------------------------------------------------------------------------------------------------------- #
+# Browser console.
+# -------------------------------------------------------------------------------------------------------------------- #
+
+console:
+  about_me: { other: "About me" }
+  buy_me: { other: "Buy me a" }
+
+# -------------------------------------------------------------------------------------------------------------------- #
+# Social.
+# -------------------------------------------------------------------------------------------------------------------- #
+
+social:
+  bitbucket: { other: "BitBucket" }
+  blogger: { other: "Blogger" }
+  digg: { other: "Digg" }
+  facebook: { other: "Facebook" }
+  github: { other: "GitHub" }
+  gitlab: { other: "GitLab" }
+  hackernews: { other: "Hacker News" }
+  instagram: { other: "Instagram" }
+  linkedin: { other: "LinkedIn" }
+  livejournal: { other: "LiveJournal" }
+  ok: { other: "OK" }
+  patreon: { other: "Patreon" }
+  pinterest: { other: "Pinterest" }
+  pocket: { other: "Pocket" }
+  reddit: { other: "Reddit" }
+  skype: { other: "Skype" }
+  telegram: { other: "Telegram" }
+  tumblr: { other: "Tumblr" }
+  twitter: { other: "Twitter" }
+  vk: { other: "VK" }
+  whatsapp: { other: "WhatsApp" }
+  wordpress: { other: "WordPress" }
+  youtube: { other: "YouTube" }

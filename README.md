@@ -1,1 +1,1 @@
-# ui-base
+# hugo-ui-base

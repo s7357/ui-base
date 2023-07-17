@@ -1,0 +1,25 @@
+<div id="hero" class="section py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-xl-2 g-5">
+      <article class="col">
+        <h2 class="display-5">{{ (i18n "hero.title") }}</h2>
+        <div class="node-body text-body-secondary lead">
+          <p>{{ (i18n "hero.body") }}</p>
+        </div>
+        <div class="d-grid gap-2 d-md-flex">
+          <a role="button" class="btn btn-dark d-inline-flex align-items-center disabled" href="#">
+            <i class="fas fa-users fa-fw me-2"></i>
+              {{ (i18n "button.community") }}
+          </a>
+          <a role="button" class="btn btn-flarus btn-flarus-primary d-inline-flex align-items-center" href="https://github.com/flarum-lang/russian" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-language fa-fw me-2"></i>
+              {{ (i18n "button.language_pack") }}
+          </a>
+        </div>
+      </article>
+      <div class="col">
+        <img src="/img/flarum.home.png" class="d-block mx-lg-auto img-fluid rounded shadow" alt="Example Flarum community" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</div>

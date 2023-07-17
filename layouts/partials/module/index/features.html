@@ -1,0 +1,39 @@
+{{ $posts := (where ($.Site.RegularPages) "Type" "in" "features") }}
+
+{{ with ($posts) }}
+  <div id="features" class="section py-5">
+    <div class="container">
+      <div class="row row-cols-1 g-3">
+        <div class="col">
+          <div class="row row-cols-1 g-3">
+              {{ range where . ".Params.info.type" "hero" }}
+                <article class="col">
+                  <h2 class="display-5">{{ (.Title) }}</h2>
+                  <div class="node-body text-body-secondary lead">
+                      {{ (.Render "summary") }}
+                  </div>
+                </article>
+              {{ end }}
+          </div>
+        </div>
+        <div class="col">
+          <div class="row row-cols-1 row-cols-xl-2 g-3">
+              {{ range where . ".Params.info.type" "!=" "hero" }}
+                <article class="col d-flex align-items-start">
+                  <div class="d-inline-flex align-items-center justify-content-center flex-shrink-0 bg-white rounded p-3 me-3">
+                    <i class="{{ (.Param "info.icon") }} fa-fw icon"></i>
+                  </div>
+                  <div>
+                    <h4>{{ (.Title) }}</h4>
+                    <div class="node-body text-body-secondary">
+                        {{ (.Render "summary") }}
+                    </div>
+                  </div>
+                </article>
+              {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

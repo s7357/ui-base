@@ -1,0 +1,38 @@
+# -------------------------------------------------------------------------------------------------------------------- #
+# Social networks.
+# -------------------------------------------------------------------------------------------------------------------- #
+
+facebook:
+  name: 'Facebook'
+  icon: 'fab fa-facebook'
+  url: ''
+
+instagram:
+  name: 'Instagram'
+  icon: 'fab fa-instagram'
+  url: ''
+
+telegram:
+  name: 'Telegram'
+  icon: 'fab fa-telegram'
+  url: ''
+
+tiktok:
+  name: 'TikTok'
+  icon: 'fab fa-tiktok'
+  url: ''
+
+twitter:
+  name: 'Twitter'
+  icon: 'fab fa-twitter'
+  url: ''
+
+vk:
+  name: 'VK'
+  icon: 'fab fa-vk'
+  url: ''
+
+youtube:
+  name: 'YouTube'
+  icon: 'fab fa-youtube'
+  url: ''

@@ -1,0 +1,43 @@
+# -------------------------------------------------------------------------------------------------------------------- #
+# Developers.
+# -------------------------------------------------------------------------------------------------------------------- #
+# company_01:
+#   weight: 10
+#   name: 'Example Development Company 01'
+#   address:
+#     - '143 Bowery, New York, NY 10002, USA'
+#   url:
+#     - 'https://example.com'
+#   email:
+#     - 'mail@example.com'
+#   phone:
+#     - '+71234445678'
+#
+# company_02:
+#   weight: 20
+#   name: 'Example Development Company 02'
+#   address:
+#     - '143 Bowery, New York, NY 10002, USA'
+#   url:
+#     - 'https://example.com'
+#   email:
+#     - 'mail@example.com'
+#   phone:
+#     - '+71234445678'
+# -------------------------------------------------------------------------------------------------------------------- #
+
+iHubTO:
+  weight: 10
+  name: 'iHub TO'
+  url:
+    - 'https://ihub.to'
+  email:
+    - 'mail@ihub.to'
+
+KitsuneSolar:
+  weight: 20
+  name: 'Kitsune Solar'
+  url:
+    - 'https://kitsune.solar'
+  email:
+    - 'mail@kitsune.solar'

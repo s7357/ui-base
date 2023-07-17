@@ -1,0 +1,47 @@
+# -------------------------------------------------------------------------------------------------------------------- #
+# General.
+# -------------------------------------------------------------------------------------------------------------------- #
+
+close: { other: "Закрыть" }
+contacts: { other: "Контакты" }
+developers: { other: "Разработчики" }
+egg: { other: "Oops!" }
+languages: { other: "Языки" }
+social_networks: { other: "Социальный сети" }
+
+# -------------------------------------------------------------------------------------------------------------------- #
+# Browser console.
+# -------------------------------------------------------------------------------------------------------------------- #
+
+console:
+  about_me: { other: "Обо мне" }
+  buy_me: { other: "Купите мне" }
+
+# -------------------------------------------------------------------------------------------------------------------- #
+# Social.
+# -------------------------------------------------------------------------------------------------------------------- #
+
+social:
+  bitbucket: { other: "BitBucket" }
+  blogger: { other: "Blogger" }
+  digg: { other: "Digg" }
+  facebook: { other: "Facebook" }
+  github: { other: "GitHub" }
+  gitlab: { other: "GitLab" }
+  hackernews: { other: "Hacker News" }
+  instagram: { other: "Instagram" }
+  linkedin: { other: "LinkedIn" }
+  livejournal: { other: "LiveJournal" }
+  ok: { other: "Одноклассники" }
+  patreon: { other: "Patreon" }
+  pinterest: { other: "Pinterest" }
+  pocket: { other: "Pocket" }
+  reddit: { other: "Reddit" }
+  skype: { other: "Skype" }
+  telegram: { other: "Telegram" }
+  tumblr: { other: "Tumblr" }
+  twitter: { other: "Twitter" }
+  vk: { other: "ВКонтакте" }
+  whatsapp: { other: "WhatsApp" }
+  wordpress: { other: "WordPress" }
+  youtube: { other: "YouTube" }

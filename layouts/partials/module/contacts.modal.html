@@ -1,0 +1,83 @@
+{{ $cfg := (($.Site.Data.org_contacts) | default "") }}
+
+<div class="modal fade" id="modal-contacts" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ (i18n "contacts") }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label='{{ (i18n "close") }}'></button>
+      </div>
+      <div class="modal-body">
+
+          {{ with ($cfg) }}
+            <div class="accordion accordion-flush" id="accordion-contacts">
+                {{ range $k, $v := (sort . ".weight") }}
+                    {{ $id := ((printf "%d.%d.%s" ($k) (now.Unix) (delimit (shuffle (seq 999)) "")) | md5) }}
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="accordion-header-contacts-{{ ($id) }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-contacts-{{ ($id) }}" aria-expanded="false" aria-controls="accordion-collapse-contacts-{{ ($id) }}">
+                            {{ (.name) }}
+                        </button>
+                      </h2>
+                      <div id="accordion-collapse-contacts-{{ ($id) }}" class="accordion-collapse collapse" aria-labelledby="accordion-header-contacts-{{ ($id) }}" data-bs-parent="#accordion-contacts">
+                        <div class="accordion-body node-body">
+                          <ul class="list-group list-group-flush">
+                              {{ with (.address) }}
+                                <li class="list-group-item">
+                                  <div class="row row-cols-1 row-cols-lg-2">
+                                      {{ range . }}
+                                        <div class="col">
+                                          <i class="fas fa-location-dot fa-fw"></i>
+                                          <a href="https://www.google.ru/maps/search/{{ . }}" target="_blank" rel="noopener nofollow">{{ . }}</a>
+                                        </div>
+                                      {{ end }}
+                                  </div>
+                                </li>
+                              {{ end }}
+                              {{ with (.url) }}
+                                <li class="list-group-item">
+                                  <div class="row row-cols-1 row-cols-lg-2">
+                                      {{ range . }}
+                                        <div class="col">
+                                          <i class="fas fa-globe fa-fw"></i>
+                                            {{ (partial "function/url.ext" (dict "href" . "text" .)) }}
+                                        </div>
+                                      {{ end }}
+                                  </div>
+                                </li>
+                              {{ end }}
+                              {{ with (.email) }}
+                                <li class="list-group-item">
+                                  <div class="row row-cols-1 row-cols-lg-2">
+                                      {{ range . }}
+                                        <div class="col">
+                                          <i class="fas fa-envelope-open-text fa-fw"></i>
+                                            {{ (partial "function/email" (dict "email" .)) }}
+                                        </div>
+                                      {{ end }}
+                                  </div>
+                                </li>
+                              {{ end }}
+                              {{ with (.phone) }}
+                                <li class="list-group-item">
+                                  <div class="row row-cols-1 row-cols-lg-2">
+                                      {{ range . }}
+                                        <div class="col">
+                                          <i class="fas fa-phone fa-fw"></i>
+                                            {{ (partial "function/phone" (dict "phone" .)) }}
+                                        </div>
+                                      {{ end }}
+                                  </div>
+                                </li>
+                              {{ end }}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                {{ end }}
+            </div>
+          {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
