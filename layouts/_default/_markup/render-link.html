@@ -5,7 +5,7 @@
 {{ $viewer := "" }}{{ $target := "_self" }}{{ $rel := "" }}
 
 {{ if (strings.HasPrefix .Destination "http") }}
-    {{ $target = "_blank" }}{{ $rel = "noopener noreferrer nofollow" }}
+    {{ $target = "_blank" }}{{ $rel = "noopener noreferrer" }}
     {{ $files := (slice ".doc" ".docx" ".xls" ".xlsx" ".ppt" ".pptx" ".odt" ".ods" ".odp") }}
     {{ range ($files) }}
         {{ with (strings.HasSuffix $href .) }}
