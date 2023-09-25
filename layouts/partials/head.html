@@ -8,8 +8,8 @@
 {{ with (.Summary) }}{{ $description = . }}{{ end }}
 {{ with (.Description) }}{{ $description = . }}{{ end }}
 
-<title>{{ $title }} {{ ($.Site.Title) }}</title>
-<meta name="title" content="{{ $title }} {{ ($.Site.Title) }}"/>
+<title>{{ ($title) }} {{ ($.Site.Title) }}</title>
+<meta name="title" content="{{ ($title) }} {{ ($.Site.Title) }}"/>
 <meta name="description" content="{{ ((($description) | plainify) | chomp) }}"/>
 
 <!--[ dns-prefetch ]-->
