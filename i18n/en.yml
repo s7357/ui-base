@@ -7,7 +7,9 @@ contacts: { other: "Contacts" }
 developers: { other: "Developers" }
 egg: { other: "Oops!" }
 languages: { other: "Languages" }
+logo: { other: 'Logotype' }
 social_networks: { other: "Social networks" }
+toggle_navigation: { other: 'Toggle navigation' }
 
 # -------------------------------------------------------------------------------------------------------------------- #
 # Browser console.

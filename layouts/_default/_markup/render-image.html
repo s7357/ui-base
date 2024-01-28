@@ -1,5 +1,19 @@
-{{ $title := ((.Title) | default "") }}
-{{ $alt := ((.Text) | default "") }}
-{{ $src := ((.Destination) | safeURL) }}
+{{- /*
+Image in markdown.
 
-<img title="{{ ($title) }}" class="img-fluid img-thumbnail" src="{{ ($src) }}" alt="{{ ($alt) }}" loading="lazy"/>
+@returns {template.HTML}
+
+@examples
+
+  ![Text](https://gohugo.io/images/hugo-logo-wide.svg "Title")
+*/ -}}
+
+{{- $src := ((.Destination) | safeURL) -}}
+{{- $alt := ((.Text) | default ($src)) -}}
+{{- $title := ((.Title) | default "") -}}
+
+<a title="{{ ($title) }}" class="d-block" href="{{ ($src) }}"
+   data-fancybox="gallery" data-caption="{{ ($title) }}">
+  <img class="img-fluid rounded" src="{{ ($src) }}" alt="{{ ($alt) }}" loading="lazy"/>
+</a>
+{{- /* This comment removes trailing newlines. */ -}}

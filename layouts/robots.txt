@@ -1,2 +1,7 @@
 User-agent: *
+Disallow: /*/index.json
+Disallow: /*/index.xml
+Disallow: /*/manifest.json
+Disallow: /*/footer/
+
 Sitemap: {{ ("sitemap.xml" | absURL) }}

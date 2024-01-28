@@ -1,0 +1,48 @@
+{{ $cfg := (site.Params.manifest) }}
+{{ $icons := (site.Data.ui.icons) }}
+{{ $lang := (site.Language.Lang) }}
+{{ $data := (newScratch) }}
+
+{{ ($data.Add "categories" (slice)) }}
+{{ range ($cfg.categories) }}{{ ($data.Add "categories" .) }}{{ end }}
+
+{{ ($data.Add "icons" (slice)) }}
+{{ range ($icons.sizes) }}
+    {{ ($data.Add "icons" (dict
+    "src" ((printf "favicon-%s.png" .) | absURL)
+    "sizes" (printf "%sx%s" . .)
+    "type" "image/png"
+    "purpose" "any"
+    )) }}
+{{ end }}
+{{ ($data.Add "icons" (dict "src" ("favicon.ico" | absURL) "sizes" "any" "type" "image/x-icon" "purpose" "any" )) }}
+{{ ($data.Add "icons" (dict "src" ("favicon.svg" | absURL) "sizes" "any" "type" "image/svg+xml" "purpose" "any" )) }}
+
+{{ $maskable := (slice "48" "72" "96" "128" "192" "384" "512") }}
+{{ range ($maskable) }}
+    {{ ($data.Add "icons" (dict
+    "src" ((printf "mi-%s.png" .) | absURL)
+    "sizes" (printf "%sx%s" . .)
+    "type" "image/png"
+    "purpose" "maskable"
+    )) }}
+{{ end }}
+{{ ($data.Add "icons" (dict "src" ("mi.png" | absURL) "sizes" "any" "type" "image/png" "purpose" "maskable" )) }}
+
+{{ $mainfest := (dict
+"id" ("/" | absURL)
+"name" (site.Title)
+"short_name" (index ($cfg.short_name) ($lang))
+"description" (site.Params.description)
+"start_url" ("/" | absURL)
+"scope" ("/" | absURL)
+"display" "standalone"
+"background_color" ($cfg.color.background)
+"theme_color" ($cfg.color.theme)
+"orientation" "any"
+"categories" ($data.Get "categories")
+"icons" ($data.Get "icons")
+"chrome_settings_overrides" (dict
+)) }}
+
+{{ (($mainfest) | jsonify) }}

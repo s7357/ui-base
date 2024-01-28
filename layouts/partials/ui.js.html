@@ -1,9 +1,10 @@
-{{ $scripts := (($.Site.Data.ui.scripts) | default slice) }}
+{{ $scripts := (site.Data.ui.scripts) }}
+{{ $cfg := (site.Params) }}
 
 <!--[ vendor-external ]-->
 {{ with ($scripts.vendor.external) }}
     {{ range . }}
-      <script src="{{ . }}" crossorigin="anonymous" defer></script>
+        <script src="{{ . }}" crossorigin="anonymous" defer></script>
     {{ end }}
 {{ end }}
 <!--[ / vendor-external ]-->
@@ -13,8 +14,8 @@
     {{ $bundle := slice }}
     {{ range . }}{{ $bundle = (($bundle) | append (resources.Get .)) }}{{ end }}
     {{ $bundle = (($bundle) | resources.Concat "js/vendor.bundle.js") }}
-    {{ $bundle = ((($bundle) | minify) | resources.Fingerprint "sha512") }}
-    <script src="{{ ($bundle.RelPermalink) }}" integrity="{{ ($bundle.Data.Integrity) }}" defer></script>
+    {{ $bundle = (($bundle) | minify) }}
+    <script src="{{ ($bundle.RelPermalink) }}" defer></script>
 {{ end }}
 <!--[ / vendor-internal ]-->
 
@@ -24,7 +25,7 @@
     {{ range . }}{{ $bundle = (($bundle) | append (resources.Get .)) }}{{ end }}
     {{ $bundle = ((($bundle) | resources.Concat "js/system.bundle.js") | js.Build) }}
     {{ $bundle = (($bundle) | resources.ExecuteAsTemplate ("js/system.bundle.js" | relLangURL) .) }}
-    {{ $bundle = ((($bundle) | minify) | resources.Fingerprint "sha512") }}
-    <script src="{{ ($bundle.RelPermalink) }}" integrity="{{ ($bundle.Data.Integrity) }}" defer></script>
+    {{ $bundle = (($bundle) | minify) }}
+    <script src="{{ ($bundle.RelPermalink) }}" defer></script>
 {{ end }}
 <!--[ / system-internal ]-->
