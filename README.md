@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-m='ui-base'; git submodule add "https://github.com/site-0002/${m}.git" "themes/${m}"
+m='ui-base'; git submodule add "https://github.com/s7357/${m}.git" "themes/${m}"
 ```
 
 ## Update

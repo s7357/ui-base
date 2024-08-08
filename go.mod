@@ -1,3 +1,3 @@
-module github.com/site-0002/ui-base
+module github.com/s7357/ui-base
 
 go 1.15
