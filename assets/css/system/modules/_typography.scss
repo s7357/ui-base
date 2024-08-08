@@ -54,8 +54,7 @@ body {
 
       pre {
         @include font-mono();
-        background-color: rgba(var(--bs-danger-rgb), 5%);
-        margin: 0;
+        border-radius: var(--bs-border-radius);
 
         > code {
           background: unset;
